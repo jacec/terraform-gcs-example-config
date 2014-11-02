@@ -11,7 +11,7 @@ provider "google" {
 resource "google_compute_instance" "front-end" {
     name = "front-end"
     machine_type = "f1-micro"
-    zone = "us-central1-a"
+    zone = "${lookup(var.zones, var.region)}"
     tags = ["http-server"]
 
     disk {
@@ -57,7 +57,7 @@ resource "google_compute_instance" "front-end" {
 resource "google_compute_instance" "back-end" {
     name = "back-end"
     machine_type = "f1-micro"
-    zone = "us-central1-a"
+    zone = "${lookup(var.zones, var.region)}"
     tags = ["db-server"]
 
     disk {
