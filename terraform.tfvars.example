@@ -1,0 +1,6 @@
+account_file = "[account.json]"
+client_secrets_file = "[client_secrets.json]"
+project = "[project id]"
+region = "us-central1"
+ssh_username = "[username]"
+ssh_key_file = "[/Users/[username]/.ssh/google_compute_engine]"
