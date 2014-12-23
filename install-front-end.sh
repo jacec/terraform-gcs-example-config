@@ -1,7 +1,7 @@
 sudo apt-get update;
 sudo apt-get -y install git nodejs;
 sudo update-alternatives --install /usr/bin/node nodejs /usr/bin/nodejs 100;
-curl https://www.npmjs.org/install.sh | sudo sh;
+curl -L https://www.npmjs.org/install.sh | sudo sh;
 git clone https://github.com/GoogleCloudPlatform/todomvc-mongodb.git;
 cd todomvc-mongodb; 
 npm install;
